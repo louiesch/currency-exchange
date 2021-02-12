@@ -11,20 +11,12 @@
       <label for='dollars'>Enter amount in USD:</label>
       <input id='dollars' class='form-control'><br>
       
-      <p>Now select what currency to convert to:</p>
+      <label for='currencies'>Now select what currency to convert to:</label>
+      <select id='currencies'>
+        <option value='AED'>UAE Dirham</option>
+      </select>
       
-      <input type="radio" id="AUD" name="currency" value="AUD" required>
-      <label for="AUD">Australian Dollar</label><br>
-      <input type="radio" id="BGN" name="currency" value="BGN">
-      <label for="BGN">Bulgarian Lev</label><br>
-      <input type="radio" id="CAD" name="currency" value="CAD">
-      <label for="CAD">Canadian Dollar</label><br>
-      <input type="radio" id="CNY" name="currency" value="CNY">
-      <label for="CNY">Chinese Yuan</label><br>
-      <input type="radio" id="EGP" name="currency" value="EGP">
-      <label for="EGP">Egyptian Pound</label><br>
-      <input type="radio" id="EUR" name="currency" value="EUR">
-      <label for="EUR">Euro</label><br>
+      
       <button type="submit" id="convertDollar" class="btn btn-dark">Convert</button>
     </form>
     <div class='showErrors'></div>
