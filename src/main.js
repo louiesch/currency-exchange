@@ -13,11 +13,17 @@ function clearFields() {
 }
 
 
-function showExchange(response, USD, currency) {
-  if (response.main) {
-    $('.showConversion').text(`${response.main}%`);
-  } else {
+function showConversion(response, USD, currency) {
+  if (response.result != 'success') {
     $('.showErrors').text(`There was an error: ${response.message}`);
+  } else if (USD === '' || USD === NaN) {
+    $('.showErrors').text(`Please enter a numerical amount in USD.`);
+  } else if (!currency) {
+    $('.showErrors').text(`Please select a currency to exchange to.`);
+  } else if(response.result === 'success') {
+    $('.showConversion').text(`${USD} dollars is equal to ${response.conversion_rates[currency]*USD} ${currency}`);
+  } else {
+    $('.showError').text(`Unknown error!`)
   }
 }
 
@@ -29,9 +35,10 @@ $(document).ready(function() {
     
     let USD = $('#dollars').val();
     let currency = $('input:radio:checked').val();
-    CurrencyConversion.showConversion()
+    clearFields();
+    CurrencyConversion.getConversion()
       .then(function(response) {
-        showExchange(response, USD, currency);
+        showConversion(response, USD, currency);
       });
   });
 });
