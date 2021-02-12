@@ -2,7 +2,7 @@
   "name": "template-repo",
   "version": "1.0.0",
   "description": "#### _{Brief description of application}_",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "build": "webpack --mode development",
     "start": "npm run build; webpack-dev-server --open --mode development",
