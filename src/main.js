@@ -16,7 +16,7 @@ function clearFields() {
 function showConversion(response, USD, currency) {
   if (response.result != 'success') {
     $('.showErrors').text(`There was an error: ${response.message}`);
-  } else if (USD === '' || USD === NaN) {
+  } else if (USD === '') {
     $('.showErrors').text(`Please enter a numerical amount in USD.`);
   } else if (!currency) {
     $('.showErrors').text(`Please select a currency to exchange to.`);
