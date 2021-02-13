@@ -34,8 +34,8 @@ $(document).ready(function() {
     event.preventDefault();
     
     let USD = $('#dollars').val();
-    let currency = $('input:radio:checked').val();
-    clearFields();
+    let currency = $('#currencies option:selected').val();
+    clearFields()
     CurrencyConversion.getConversion()
       .then(function(response) {
         showConversion(response, USD, currency);
