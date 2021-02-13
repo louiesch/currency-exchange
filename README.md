@@ -1,6 +1,6 @@
-# _{Application Name}_
+# _Currency Exchanger_
 
-#### _{Brief description of application}_
+#### _Enter an amount in USD and select which currency to convert to._
 
 #### By _**Louie Schoenknecht**_
 
@@ -18,20 +18,29 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_Application was created for the week 6 independent project at Epicodus, for practice using APIs._
+* _A user should be able to enter an amount (in U.S. dollars) and then specify another currency. The user should then see the total amount they entered in converted currency. In the example above, a user might enter 10 dollars and then see that amount in South Korean won._
+* _Users should be able to convert U.S. currency into at least 5 other types of currency._
+* _If the API call results in an error (any message not a 200 OK), the application should return a notification to the user that states what the error is._
+* _If the query response doesn't include that particular currency, the application should return a notification that states the currency in question doesn't exist._
 
 ## Setup/Installation Requirements
 
-* _Clone repository from GitHub using: $ git clone https://github.com/louiesch/template-repo_
+To use this application, user will need to acquire their own API key.
+* _Visit the [ExchangeRate-API](https://www.exchangerate-api.com/) website._
+* _Enter email address and click "get free key"_
+* _Complete account registration to get your API key._
+* _After aquiring API key, clone repository from GitHub using $ git clone https://github.com/louiesch/currency-exchanger in the terminal_
 * _Open project directory in terminal_
+* _Protect your API key by creating a .env file in top level of project, and adding .env to your .gitignore_
+* _Paste your API into your .env folder_
 * _Re-build project environment using command $ npm install_
-* _Create project environment using command $ npm run build_
+* _Create project environment and run distribution bundle using command $ npm run build_
 * _Open the project in browser using command $ npm run start_
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No known bugs_
 
 ## License
 
