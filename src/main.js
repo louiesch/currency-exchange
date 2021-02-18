@@ -15,7 +15,7 @@ function clearFields() {
 
 function showConversion(response, USD, currency) {
   if (response.result != 'success') {
-    $('.showErrors').text(`There was an error: ${response.message}`);
+    $('.showErrors').text(`There was an error: ${response.error}`);
   } else if (USD === '') {
     $('.showErrors').text(`Please enter a numerical amount in USD.`);
   } else if (!currency) {
@@ -30,6 +30,7 @@ function showConversion(response, USD, currency) {
 // UI LOGIC ------------------------
 
 $(document).ready(function() {
+  
   $('#convertDollar').click(function(event) {
     event.preventDefault();
     
@@ -40,5 +41,13 @@ $(document).ready(function() {
       .then(function(response) {
         showConversion(response, USD, currency);
       });
+  });
+
+// code below is to prevent user from entering anything but numbers
+  $("#dollars").keypress(function(e){
+    var keyCode = e.which;
+    if ((keyCode != 8 || keyCode ==32 ) && (keyCode < 48 || keyCode > 57)) { 
+      return false;
+    }
   });
 });
