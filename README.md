@@ -33,8 +33,9 @@ To use this application, user will need to acquire their own API key.
 * _After aquiring API key, clone repository from GitHub using $ git clone https://github.com/louiesch/currency-exchanger in the terminal_
 * _Open project directory in terminal_
 * _Protect your API key by creating a .env file in top level of project (.env should already be in your .gitignore)_
-* _Paste your API into your .env folder_
-  > NAME_HERE=123456
+  > touch .env
+* _Paste your API into your .env folder like such, replacing 123456 with your key (Note: it is essential that you use that exact syntax with all caps and the underscore when pasting your API key into .env)_
+  > API_KEY=123456
 * _Re-build project environment_
   > $ npm install
 * _Create project environment and run distribution bundle_
