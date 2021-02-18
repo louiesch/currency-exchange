@@ -21,9 +21,9 @@ function showConversion(response, USD, currency) {
   } else if (!currency) {
     $('.showErrors').text(`Please select a currency to exchange to.`);
   } else if(response.result === 'success') {
-    $('.showConversion').text(`${USD} dollars is equal to ${response.conversion_rates[currency]*USD} ${currency}`);
+    $('.showConversion').text(`${USD} Dollars is equal to ${response.conversion_rates[currency]*USD} ${currency}`);
   } else {
-    $('.showError').text(`Unknown error!`)
+    $('.showError').text(`Unknown error!`);
   }
 }
 
@@ -35,7 +35,7 @@ $(document).ready(function() {
     
     let USD = $('#dollars').val();
     let currency = $('#currencies option:selected').val();
-    clearFields()
+    clearFields();
     CurrencyConversion.getConversion()
       .then(function(response) {
         showConversion(response, USD, currency);

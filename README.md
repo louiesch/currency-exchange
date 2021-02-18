@@ -32,11 +32,15 @@ To use this application, user will need to acquire their own API key.
 * _Complete account registration to get your API key._
 * _After aquiring API key, clone repository from GitHub using $ git clone https://github.com/louiesch/currency-exchanger in the terminal_
 * _Open project directory in terminal_
-* _Protect your API key by creating a .env file in top level of project, and adding .env to your .gitignore_
+* _Protect your API key by creating a .env file in top level of project (.env should already be in your .gitignore)_
 * _Paste your API into your .env folder_
-* _Re-build project environment using command $ npm install_
-* _Create project environment and run distribution bundle using command $ npm run build_
-* _Open the project in browser using command $ npm run start_
+  > NAME_HERE=123456
+* _Re-build project environment_
+  > $ npm install
+* _Create project environment and run distribution bundle_
+  > $ npm run build
+* _Open the project in browser_
+  > $ npm run start
 
 ## Known Bugs
 
